@@ -1,0 +1,22 @@
+
+
+<h1>Oturum Ac</h1>
+<%=form_with model: @user do |form| %>
+<div class="mb-3">
+<%= form.text_field :email, class: "form-control"%>
+</div>
+<div class="mb-3">
+<%= form.password_field :password ,class: "form-control"%>
+</div>
+<div class="mb-3">
+<%=form.password_field :password, class: "form-control"%>
+</div>
+
+
+<div class="mb-3">
+<%= form.label :password_confirmation %>
+<%=form.password_field :password_confirmation, autocomplete: "email"%>
+<%= button_to "New", action: "new" %>
+</div>
+<% end %>
+
